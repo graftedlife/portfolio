@@ -1,0 +1,45 @@
+title: Modern Portfolio
+description: Personal portfolio and blog website
+baseurl: ""
+url: ""
+author: John Doe
+email: contact@example.com
+github_username: johndoe
+linkedin_username: johndoe
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  publications:
+    output: true
+    permalink: /publications/:path/
+  talks:
+    output: true
+    permalink: /talks/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: "publication"
+  - scope:
+      path: ""
+      type: "talks"
+    values:
+      layout: "talk"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
